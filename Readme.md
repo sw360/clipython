@@ -1,6 +1,6 @@
 # CLI for Python
 
-Python library to read Component License Information (CLI) files
+Python library to read Component License Information (CLI) files.
 
 This is still **WORK-IN-PROGRESS.**
 
@@ -30,11 +30,11 @@ This is still **WORK-IN-PROGRESS.**
 * Start using the API:
 
   ```python
-  import sw360
-  client = sw360.SW360(sw360_url, sw360_api_token)
+  import cli
+  clifile = cli.CLI.CliFile()
   ```
 
 ## Demo ##
 
-The script ``check_project.py`` shows hot to use the library to retrieve some information of a given project on SW360.
+The script ``show_licenses.py`` shows how to use the library to retrieve some information of a given project on SW360.
 
