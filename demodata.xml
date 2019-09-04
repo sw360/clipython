@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ComponentLicenseInformation component="rgbcolor-1.0.1.zip" creator="priya.naik.ext@siemens.com" date="2019-04-25" baseDoc="" toolUsed="FOSSologyNG" componentID="" includesAcknowledgements="true"   componentSHA1="56365b415d47c7a9bd811f69fb529adf95965496" Version="1.2">
+<License type="global" name="Dual License - MIT or FEEL-FREE License Notice" spdxidentifier="Dual License - MIT or FEEL-FREE License Notice">
+<Content><![CDATA[MIT license, or the license in './FEEL-FREE.md'
+]]></Content>
+<Files><![CDATA[node-rgbcolor-master.zip/node-rgbcolor-master/package.json
+node-rgbcolor-master.zip/node-rgbcolor-master/LICENSE.md
+]]></Files>
+<FileHash><![CDATA[6424d8bf4ff1dcec6d3487121d5ce3778c86c6d0
+598091c2cd374fb05f9cacaef1c201a429a29224
+]]></FileHash>
+<Acknowledgements><![CDATA[To the extend files may be licensed under MIT or FEEL-FREE License Notice, in this context MIT has been chosen. 
+This shall not restrict the freedom of other users to choose FEEL-FREE License Notice. 
+]]></Acknowledgements>
+</License>
+<License type="global" name="FEEL-FREE License Notice" spdxidentifier="FEEL-FREE License Notice">
+<Content><![CDATA[Feel free to use the code for your own color picker tool or whatever you feel
+like. If you let me know how you use it, that would be even greater. Meanwhile
+any other comments are highly appreciated. 
+]]></Content>
+<Files><![CDATA[node-rgbcolor-master.zip/node-rgbcolor-master/FEEL-FREE.md
+node-rgbcolor-master.zip/node-rgbcolor-master/LICENSE.md
+]]></Files>
+<FileHash><![CDATA[c7e702f232a15d0990a72c189653532c2b0c13d9
+598091c2cd374fb05f9cacaef1c201a429a29224
+]]></FileHash>
+</License>
+<License type="global" name="MIT" spdxidentifier="MIT">
+<Content><![CDATA[Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+]]></Content>
+<Files><![CDATA[node-rgbcolor-master.zip/node-rgbcolor-master/LICENSE.md
+rgbcolor.js
+]]></Files>
+<FileHash><![CDATA[598091c2cd374fb05f9cacaef1c201a429a29224
+c1b37305b2b4f3445f4d6926ee38a8103173af22
+]]></FileHash>
+</License>
+
+
+
+<Copyright>
+<Content><![CDATA[Copyright (c) 2016 Stoyan Stefanov
+]]></Content>
+<Files><![CDATA[node-rgbcolor-master.zip/node-rgbcolor-master/LICENSE.md
+]]></Files>
+<FileHash><![CDATA[598091c2cd374fb05f9cacaef1c201a429a29224
+]]></FileHash>
+</Copyright>
+
+
+
+
+</ComponentLicenseInformation>
+
