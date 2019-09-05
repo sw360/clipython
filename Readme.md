@@ -18,7 +18,18 @@ This is still **WORK-IN-PROGRESS.**
 
 ### From BT-Artifactory
 
-* using `pipenv` does **not yet work**, sorry...
+* using `pipenv`
+  * ensure that your pipfile contains the correct source, i.e. something like
+    ```
+    [[source]]
+    url = "https://devops.bt.siemens.com/artifactory/api/pypi/pypi-all/simple"
+    verify_ssl = true
+    name = "btartifactory"
+    ```
+  * run the following command
+    ```shell
+    pipenv install cli
+    ```
 
 * using `pip`:
   ```shell
