@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
  
 setup(name='cli',
-      version='1.0',
+      version='1.1',
       license='SISL-1.2',
       author='Thomas Graf',
       author_email='thomas.graf@siemens.com',

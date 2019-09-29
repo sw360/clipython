@@ -134,11 +134,15 @@ class CliObligation:
     def read_from_element(self, element):
         for elem in element:
             if elem.tag == self.TOPIC_TAG:
-                self.topic = elem.text.strip()
+                self.topic = elem.text
+                if self.topic:
+                    self.topic = self.topic.strip()
                 continue
 
             if elem.tag == self.TEXT_TAG:
-                self.text = elem.text.strip()
+                self.text = elem.text
+                if self.text:
+                    self.text = self.text.strip()
                 continue
 
             if elem.tag == self.LICENSES_TAG:

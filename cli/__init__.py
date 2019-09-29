@@ -6,7 +6,7 @@
 # Licensed as Siemens Inner Source, see top-level License.md file for details.
 # -------------------------------------------------------------------------------
 
-__version__ = (1, 0)
+__version__ = (1, 1)
 
 from .CLI import (
     CliFile,
