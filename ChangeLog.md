@@ -1,5 +1,8 @@
 # Python library to read Component License Information (CLI) files.
 
+## V1.2
+* moved from `pipenv` to `poetry`.
+
 ## V1.1	(2019-09-29)
 * more stable CLI file reading.
 

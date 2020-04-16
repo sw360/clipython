@@ -2,8 +2,6 @@
 
 Python library to read Component License Information (CLI) files.
 
-This is still **WORK-IN-PROGRESS.**
-
 # Usage
 
 ## Installation
@@ -36,6 +34,16 @@ This is still **WORK-IN-PROGRESS.**
   pip install cli
   ```
 
+### Required Packages ##
+
+* (none)
+
+All dependencies can be installed using using `poetry` (*if you're not using [Poetry](https://python-poetry.org/), have a look at [pyproject.toml](pyproject.toml) for a list of dependencies*):
+  
+  ```shell
+  poetry install
+  ```
+
 ### Additional Steps
 
 * Start using the API:
@@ -44,6 +52,19 @@ This is still **WORK-IN-PROGRESS.**
   import cli
   clifile = cli.CLI.CliFile()
   ```
+
+## Build
+
+### Building Python package
+
+For building the library, you need [Poetry](https://python-poetry.org/). Build is then simply triggered using
+
+```shell
+poetry build
+```
+
+This creates the source and wheel files in ```dist/``` subdirectory -- which can then be uploaded or installed locally using ```pip```.
+
 
 ## Demo ##
 

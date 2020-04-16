@@ -5,15 +5,15 @@ code among Siemens Affiliates on an internal
 code sharing platform. It applies to Siemens AG and all Siemens
 Affiliates (defined as companies in which Siemens AG holds at
 least 50% of the shares or exercises control) that are either
-participating in the Cost Contribution Agreement (“CCA”) or are
+participating in the Cost Contribution Agreement ("CCA") or are
 entitled to participate by other agreements (hereinafter referred
-to as “Participating Siemens Entity”).
+to as "Participating Siemens Entity").
 
 Each Participating Siemens Entity grants to all other
 Participating Siemens Entities a non-exclusive, perpetual and
 irrevocable right and license to make use of the software and the
 associated documentation files that it has developed and expressly
-designated as an Inner Source project (hereinafter “SOFTWARE”),
+designated as an Inner Source project (hereinafter "SOFTWARE"),
 subject to compliance with the following terms.  Each
 Participating Siemens Entity is entitled to:
 

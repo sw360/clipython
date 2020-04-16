@@ -1,5 +1,5 @@
 # -------------------------------------------------------------------------------
-# (c) 2019 Siemens AG
+# (c) 2019-2020 Siemens AG
 # All Rights Reserved.
 # Author: thomas.graf@siemens.com
 #
@@ -20,6 +20,7 @@ import cli
 
 # initialize colorama
 init()
+
 
 class ShowLicenses():
     """Application class"""
@@ -68,14 +69,16 @@ class ShowLicenses():
         license_list = []
         for lic in clifile.licenses:
             license_list.append(lic.name)
-            if not lic.name in self.global_license_list:
+            if lic.name not in self.global_license_list:
                 self.global_license_list.append(lic.name)
 
     def process_commandline(self, argv):
         """Reads the command line arguments"""
         if len(argv) < 2:
-            sys.exit(Fore.LIGHTRED_EX + "  No CLI file specified!"\
-                + Fore.RESET)
+            sys.exit(
+                Fore.LIGHTRED_EX +
+                "  No CLI file specified!" +
+                Fore.RESET)
 
         self.cli_filename = argv[1]
 
@@ -87,6 +90,7 @@ class ShowLicenses():
         self.global_license_list = []
         self.process_cli_file(self.cli_filename)
         self.print_license_list(self.global_license_list)
+
 
 if __name__ == '__main__':
     APP = ShowLicenses()
