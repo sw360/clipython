@@ -8,7 +8,7 @@
 
 __version__ = (1, 2)
 
-from .CLI import (
+from .CLI import (  # noqa
     CliFile,
     CliLicense,
     CliCopyright,
