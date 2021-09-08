@@ -21,6 +21,3 @@ format_and_style:
     stage: check
     script:
         - poetry run flake8 . --exclude=.venv
-    except:
-        - master
-
