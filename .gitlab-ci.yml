@@ -7,6 +7,7 @@ variables:
 
 stages:
     - check
+    - deploy
 
 before_script:
     - poetry config virtualenvs.in-project true
@@ -25,7 +26,7 @@ format_and_style:
 package:
     variables:
         REGISTRY_URL: https://code.siemens.com/api/v4/projects/${CI_PROJECT_ID}/packages
-    stage: build
+    stage: deploy
     script:
         - sed -i 's/^version = "\([^"]*\)"/version = "\1-dev"/' pyproject.toml
         - poetry install --no-root  
