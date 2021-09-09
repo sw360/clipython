@@ -182,3 +182,4 @@ build/
 dist/
 Old/
 cli.egg-info/
+__internal__/

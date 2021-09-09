@@ -21,3 +21,24 @@ format_and_style:
     stage: check
     script:
         - poetry run flake8 . --exclude=.venv
+
+package:
+    variables:
+        REGISTRY_URL: https://code.siemens.com/api/v4/projects/${CI_PROJECT_ID}/packages
+    stage: build
+    script:
+        - sed -i 's/^version = "\([^"]*\)"/version = "\1-dev"/' pyproject.toml
+        - poetry install --no-root  
+        - >
+         poetry run python3 -c "import requests; r=requests.get('${REGISTRY_URL}').json()
+
+         if len(r)==1: print(requests.delete('${REGISTRY_URL}/'+str(r[0]['id']), headers={'PRIVATE-TOKEN': '${PKG_ACCESS_TOKEN}'}))
+         # delete existing pkg, otherwise publish will fail. CI_JOB_TOKEN can't delete packages, use project access token with scope 'api'
+
+         else: print(len(r), 'packages found - no cleanup')"
+        - poetry config repositories.code ${REGISTRY_URL}/pypi/
+        - poetry publish --repository code --build --username gitlab-ci-token --password ${CI_JOB_TOKEN} -n
+    rules:
+        - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH' # only on "master" branch (or "main" in future)
+          when: manual
+          allow_failure: true
