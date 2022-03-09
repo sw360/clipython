@@ -9,8 +9,8 @@
 
 import unittest
 
-from cli import CliFile, LicenseTools
-from cli.CLI import CliLicense   # noqa: E402
+from cli import CliFile, CliLicense
+from cli.license_tools import LicenseTools
 
 
 class LicenseToolTest(unittest.TestCase):

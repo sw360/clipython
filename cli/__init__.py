@@ -10,10 +10,11 @@
 __version__ = (2, 0)
 
 from .CLI import (  # noqa
+    CliObligation,
     CliFile,
     CliLicense,
     CliCopyright,
     CliExportRestriction,
-    CliObligation,
-    LicenseTools,
 )
+
+from .license_tools import LicenseTools  # noqa

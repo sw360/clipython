@@ -9,7 +9,7 @@
 
 import unittest
 
-from cli import CliFile  # noqa: E402
+from cli import CliFile
 
 
 class CliFileTest(unittest.TestCase):
