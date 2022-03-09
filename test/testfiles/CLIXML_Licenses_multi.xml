@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<ComponentLicenseInformation component="TestFile1" creator="john.doe@cli.com" date="2022-03-08" baseDoc="/srv/fotransfer/repository/report" toolUsed="SpdxToCliConverter" componentID="12345" includesAcknowledgements="false" componentSHA1="5243c0eac8c674732802731670657c93855f4071" Version="1.4">
+  <License type="otheryellow" name="Dual License:Apache-2.0 and MPL-1.1" spdxidentifier="Dual License:Apache-2.0 and MPL-1.1">
+    <Content><![CDATA[This package, the RabbitMQ .NET client library, is dual-licensed under
+    the Apache License v2 and the Mozilla Public License v1.1.
+    
+    For the Apache License, please see the file LICENSE-APACHE2.
+    
+    For the Mozilla Public License, please see the file LICENSE-MPL-RabbitMQ.
+    
+    For attribution of copyright and other details of provenance, please
+    refer to the source code.
+    
+    If you have any questions regarding licensing, please contact us at 
+    info@rabbitmq.com.
+    ]]></Content>
+    <Files><![CDATA[plugins/aten-0.5.2.ez/aten-0.5.2/ebin/aten.app
+    ]]></Files>
+    <FileHash><![CDATA[237981338ebff5024a6932efb9748763cfb19927]]></FileHash>
+    <Acknowledgements><![CDATA[To the extend files may be licensed under Apache-2.0 AND MPL-1.1, in this context MPL-1.1 has been chosen.]]></Acknowledgements>
+    </License>
+  <Copyright>
+    <Content><![CDATA[Copyright Me Inc. All Rights Reserved.]]></Content>
+    <Files><![CDATA[schematics-core/utility/strings.ts]]></Files>
+    <FileHash><![CDATA[]]></FileHash>
+  </Copyright>
+  <IrrelevantFiles>
+    <Files><![CDATA[]]></Files>
+  </IrrelevantFiles>
+  <Tags>SPDX,CREATED_FROM_SPDX</Tags>
+  <Comment>TestComment</Comment>
+  <ExternalIds />
+</ComponentLicenseInformation>

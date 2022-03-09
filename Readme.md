@@ -70,3 +70,5 @@ This creates the source and wheel files in ```dist/``` subdirectory -- which can
 
 The script ``show_licenses.py`` shows how to use the library to retrieve some information of a given project on SW360.
 
+## License
+The project is licensed under the MIT license. SPDX-License-Identifier: MIT

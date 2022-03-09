@@ -1,51 +1,22 @@
-Siemens Inner Source License 1.2
+MIT License
 
-This license serves the purpose to facilitate exchange of source
-code among Siemens Affiliates on an internal
-code sharing platform. It applies to Siemens AG and all Siemens
-Affiliates (defined as companies in which Siemens AG holds at
-least 50% of the shares or exercises control) that are either
-participating in the Cost Contribution Agreement ("CCA") or are
-entitled to participate by other agreements (hereinafter referred
-to as "Participating Siemens Entity").
+Copyright (c) 2019-2021 Siemens AG
 
-Each Participating Siemens Entity grants to all other
-Participating Siemens Entities a non-exclusive, perpetual and
-irrevocable right and license to make use of the software and the
-associated documentation files that it has developed and expressly
-designated as an Inner Source project (hereinafter "SOFTWARE"),
-subject to compliance with the following terms.  Each
-Participating Siemens Entity is entitled to:
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:
 
+The above copyright notice and this permission notice (including the next
+paragraph) shall be included in all copies or substantial portions of the
+Software.
 
-copy, modify, merge, sublicense, distribute, publish and make
-available the SOFTWARE in source-code and binary form for internal
-purposes; and 
-
-copy, sublicense, publish, distribute and make available the
-SOFTWARE in binary form only to a third party (e.g. a SIEMENS
-customer), subject to these restrictions: 
-
-a) The entity may not grant any exclusive rights to the SOFTWARE
-to any third party; and
-
-b) The entity must observe all restrictions and/or guidelines and
-the optional RESTRICTIONS.md file of the relevant inner source
-project; and
-
-c) The entity must license the SOFTWARE to third parties under
-license terms that do not contradict the terms of this license,
-the CCA and/or any other applicable agreement that entitles the
-entity to participate; and
-
-d) The entity must hold responsibility for the use of the
-SOFTWARE towards any third party (e.g. a Siemens customer), and
-not raise warranty or damage claims for faults in the SOFTWARE
-under ZRG (as ZRG require a customer/supplier relationship and
-code-sharing is a combination of both).
-
-
-Each Participating Siemens Entity must make available all versions
-of the SOFTWARE on the Siemens Inner Source Code Repository
-platform in source code form under this License in its then
-current version.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

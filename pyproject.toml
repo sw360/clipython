@@ -1,12 +1,15 @@
 [tool.poetry]
 name = "cli"
-version = "1.2"
+version = "2.0"
 description = "Support component license information (CLI) files"
 authors = ["Thomas Graf <thomas.graf@siemens.com>"]
-license = "SISL-1.2"
+license = "MIT"
+readme="Readme.md"
 include = ["LICENSE.md"]
 classifiers = [
+    "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
     "Natural Language :: English",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3 :: Only",
@@ -19,6 +22,8 @@ python = "^3.5"
 colorama = "^0.4.3"
 flake8 = "^3.9.2"
 requests = "^2.22.0"
+pytest = "^6.1.2"
+coverage = "^5.3"
 
 [build-system]
 requires = ["poetry>=0.12"]

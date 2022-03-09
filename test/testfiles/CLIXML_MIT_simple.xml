@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<ComponentLicenseInformation component="TestFile1" creator="john.doe@cli.com" date="2022-03-08" baseDoc="/srv/fotransfer/repository/report" toolUsed="SpdxToCliConverter" componentID="12345" includesAcknowledgements="false" componentSHA1="5243c0eac8c674732802731670657c93855f4071" Version="1.4">
+  <License type="global" name="MIT License" spdxidentifier="MIT">
+    <Content><![CDATA[
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+      ]]></Content>
+    <Files><![CDATA[ngrx-store.zip/store/package.json
+ngrx-store.zip/store/README.md
+ngrx-store.zip/store/schematics-core/utility/strings.ts
+ngrx-store.zip/store/schematics-core/utility/ast-utils.ts
+ngrx-store.zip/store/schematics-core/utility/find-component.ts
+ngrx-store.zip/store/schematics-core/utility/find-module.ts
+ngrx-store.zip/store/schematics-core/utility/change.ts]]></Files>
+    <FileHash><![CDATA[]]></FileHash>
+    <Tags>TestTag1</Tags>
+  </License>
+  <Copyright>
+    <Content><![CDATA[Copyright Me Inc. All Rights Reserved.]]></Content>
+    <Files><![CDATA[schematics-core/utility/strings.ts]]></Files>
+    <FileHash><![CDATA[]]></FileHash>
+  </Copyright>
+  <IrrelevantFiles>
+    <Files><![CDATA[]]></Files>
+  </IrrelevantFiles>
+  <Tags>SPDX,CREATED_FROM_SPDX</Tags>
+  <Comment>TestComment</Comment>
+  <ExternalIds />
+</ComponentLicenseInformation>

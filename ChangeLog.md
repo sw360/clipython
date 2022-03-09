@@ -1,5 +1,9 @@
 # Python library to read Component License Information (CLI) files.
 
+## NEXT (V2.0)
+* relicensed to MIT.
+* unit tests added.
+
 ## V1.2
 * moved from `pipenv` to `poetry`.
 
