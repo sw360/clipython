@@ -7,7 +7,7 @@
 # SPDX-License-Identifier: MIT
 # -------------------------------------------------------------------------------
 
-__version__ = (2, 0)
+__version__ = (1, 3)
 
 from .CLI import (  # noqa
     CliObligation,
