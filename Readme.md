@@ -2,49 +2,25 @@
 
 Python library to read Component License Information (CLI) files.
 
-# Usage
+For more information about the CLI file format, please have a look at
+[ComponentLicenseInformation.md](ComponentLicenseInformation.md).
 
-## Installation
+## Usage
 
-### From Source
+### Installation
 
-* Use directly this repository:
-  
-  ```shell
-  pipenv install -e git+git@code.siemens.com/sw360/cli-python.git#egg=cli
-  ```
+This project is available as [Python package on PyPi.org](https://pypi.org/project/cli-python/).  
+Install cli and required dependencies:
 
-### From BT-Artifactory
-
-* using `pipenv`
-  * ensure that your pipfile contains the correct source, i.e. something like
-    ```
-    [[source]]
-    url = "https://devops.bt.siemens.com/artifactory/api/pypi/pypi-all/simple"
-    verify_ssl = true
-    name = "btartifactory"
-    ```
-  * run the following command
-    ```shell
-    pipenv install cli
-    ```
-
-* using `pip`:
   ```shell
   pip install cli
   ```
 
-### Required Packages ##
+### Required Packages
 
-* (none)
+* none
 
-All dependencies can be installed using using `poetry` (*if you're not using [Poetry](https://python-poetry.org/), have a look at [pyproject.toml](pyproject.toml) for a list of dependencies*):
-  
-  ```shell
-  poetry install
-  ```
-
-### Additional Steps
+## Using the API
 
 * Start using the API:
 
@@ -53,22 +29,53 @@ All dependencies can be installed using using `poetry` (*if you're not using [Po
   clifile = cli.CLI.CliFile()
   ```
 
+## Contribute
+
+* All contributions in form of bug reports, feature requests or merge requests!
+* Use proper [docstrings](https://realpython.com/documenting-python-code/) to document functions
+  and classes
+* Extend the testsuite **poetry run pytest** with the new functions/classes
+
 ## Build
 
 ### Building Python package
 
-For building the library, you need [Poetry](https://python-poetry.org/). Build is then simply triggered using
+For building the library, you need [Poetry](https://python-poetry.org/). Build is then
+simply triggered using
 
 ```shell
 poetry build
 ```
 
-This creates the source and wheel files in ```dist/``` subdirectory -- which can then be uploaded or installed locally using ```pip```.
+This creates the source and wheel files in ```dist/``` subdirectory -- which can then
+be uploaded or installed locally using ```pip```.
 
+## Test
 
-## Demo ##
+Start the complete test suite or a specific test case (and generate coverage report):
 
-The script ``show_licenses.py`` shows how to use the library to retrieve some information of a given project on SW360.
+```shell
+poetry run pytest
+```
+
+or
+
+```shell
+poetry run coverage run -m pytest
+poetry run coverage report -m --omit "*/site-packages/*.py"
+poetry run coverage html --omit "*/site-packages/*.py"
+```
+
+## Demo
+
+The script ``show_licenses.py`` shows how to use the library to retrieve some information
+of a given project on SW360.
+
+```shell
+python ./show_licenses.py ./test/testfiles/CLIXML_MIT_simple.xml
+```
 
 ## License
-The project is licensed under the MIT license. SPDX-License-Identifier: MIT
+
+The project is licensed under the MIT license.  
+SPDX-License-Identifier: MIT

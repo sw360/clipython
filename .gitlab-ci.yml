@@ -9,25 +9,31 @@ stages:
     - check
     - deploy
 
-before_script:
-    - poetry config virtualenvs.in-project true
-    - poetry install --no-root
-
 cache:
     paths:
         - .venv
     key: "${CI_COMMIT_REF_SLUG}"
 
-format_and_style:
+format_and_style_python:
     stage: check
     script:
+        - poetry config virtualenvs.in-project true
+        - poetry install --no-root
         - poetry run flake8 . --exclude=.venv
+
+format_and_style_markdown:
+    image: node:erbium
+    stage: check
+    script:
+        - npx -q markdownlint-cli *.md
 
 package:
     variables:
         REGISTRY_URL: https://code.siemens.com/api/v4/projects/${CI_PROJECT_ID}/packages
     stage: deploy
     script:
+        - poetry config virtualenvs.in-project true
+        - poetry install --no-root
         - sed -i 's/^version = "\([^"]*\)"/version = "\1-dev"/' pyproject.toml
         - poetry install --no-root  
         - >
