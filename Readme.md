@@ -1,6 +1,8 @@
 # CLI for Python
 
-Python library to read Component License Information (CLI) files.
+Python library to read Component License Information (CLI) files. They can be
+created by [FOSSology](https://www.fossology.org) and stored in
+[SW360](https://www.eclipse.org/sw360/).
 
 For more information about the CLI file format, please have a look at
 [ComponentLicenseInformation.md](ComponentLicenseInformation.md).
@@ -31,9 +33,9 @@ Install cli and required dependencies:
 
 ## Contribute
 
-* All contributions in form of bug reports, feature requests or merge requests!
-* Use proper [docstrings](https://realpython.com/documenting-python-code/) to document functions
-  and classes
+* All contributions in form of bug reports, feature requests or merge requests are welcome!
+* Please use proper [docstrings](https://realpython.com/documenting-python-code/) to document
+  functions and classes.
 * Extend the testsuite **poetry run pytest** with the new functions/classes
 
 ## Build
@@ -69,7 +71,7 @@ poetry run coverage html --omit "*/site-packages/*.py"
 ## Demo
 
 The script ``show_licenses.py`` shows how to use the library to retrieve some information
-of a given project on SW360.
+of a given CLI file.
 
 ```shell
 python ./show_licenses.py ./test/testfiles/CLIXML_MIT_simple.xml
