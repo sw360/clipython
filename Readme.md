@@ -1,6 +1,8 @@
 # CLI for Python
 
-Python library to read Component License Information (CLI) files.
+Python library to read Component License Information (CLI) files. They can be
+created by [FOSSology](https://www.fossology.org) and stored in
+[SW360](https://www.eclipse.org/sw360/).
 
 For more information about the CLI file format, please have a look at
 [ComponentLicenseInformation.md](ComponentLicenseInformation.md).
