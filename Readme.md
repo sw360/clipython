@@ -71,7 +71,7 @@ poetry run coverage html --omit "*/site-packages/*.py"
 ## Demo
 
 The script ``show_licenses.py`` shows how to use the library to retrieve some information
-of a given project on SW360.
+of a given CLI file.
 
 ```shell
 python ./show_licenses.py ./test/testfiles/CLIXML_MIT_simple.xml
