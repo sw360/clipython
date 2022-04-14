@@ -33,9 +33,9 @@ Install cli and required dependencies:
 
 ## Contribute
 
-* All contributions in form of bug reports, feature requests or merge requests!
-* Use proper [docstrings](https://realpython.com/documenting-python-code/) to document functions
-  and classes
+* All contributions in form of bug reports, feature requests or merge requests are welcome!
+* Please use proper [docstrings](https://realpython.com/documenting-python-code/) to document
+  functions and classes.
 * Extend the testsuite **poetry run pytest** with the new functions/classes
 
 ## Build
