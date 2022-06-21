@@ -9,12 +9,12 @@
 
 __version__ = (1, 3)
 
-from .CLI import (  # noqa
-    CliObligation,
+# isort: skip_file
+from .CLI import (  # noqa: F401
     CliFile,
-    CliLicense,
     CliCopyright,
     CliExportRestriction,
+    CliLicense,
+    CliObligation,
 )
-
-from .license_tools import LicenseTools  # noqa
+from .license_tools import LicenseTools  # noqa: F401

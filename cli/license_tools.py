@@ -7,8 +7,8 @@
 # SPDX-License-Identifier: MIT
 # -------------------------------------------------------------------------------
 
-from .cli_license import CliLicense
 from .CLI import CliFile
+from .cli_license import CliLicense
 
 
 class LicenseTools:
@@ -51,8 +51,8 @@ class LicenseTools:
     @staticmethod
     def is_source_code_shipping_license(spdx_identifier: str) -> bool:
         """Determines whether this is a license where the source code needs to
-       be ready to be shipped to customers.
-       Please note that this is a very simplified approach."""
+        be ready to be shipped to customers.
+        Please note that this is a very simplified approach."""
         licenseUpper = spdx_identifier.upper()
         if "GPL" in licenseUpper:  # incudes LGPL
             return True
