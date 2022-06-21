@@ -10,8 +10,8 @@
 import xml.etree.ElementTree as ET
 
 from .cli_copyright import CliCopyright
-from .cli_license import CliLicense
 from .cli_export_restriction import CliExportRestriction
+from .cli_license import CliLicense
 from .cli_obligation import CliObligation
 
 
