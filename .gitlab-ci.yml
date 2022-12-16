@@ -20,10 +20,9 @@ format_and_style_python:
     script:
         - poetry config virtualenvs.in-project true
         - poetry install --no-root
-        - poetry run isort  --skip .venv    cli test
+        # - poetry run isort  --skip .venv    cli test
         - poetry run black  --exclude=.venv cli test
         - poetry run flake8 --exclude=.venv cli test
-
 
 
 format_and_style_markdown:
