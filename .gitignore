@@ -30,6 +30,21 @@ ClientBin/
 *.publishsettings
 node_modules/
 
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Sphinx documentation
+docs/_build/
+
 # Project specific
 __pycache__
 build/
