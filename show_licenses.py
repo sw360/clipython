@@ -17,7 +17,7 @@ show_licenses filename
 
 import sys
 from colorama import init, Fore
-import cli
+import cli_support
 
 # initialize colorama
 init()
@@ -56,7 +56,7 @@ class ShowLicenses():
 
     def process_cli_file(self, cli_filename):
         """Processes a single CLI file"""
-        clifile = cli.CLI.CliFile()
+        clifile = cli_support.CLI.CliFile()
 
         try:
             clifile.read_from_file(cli_filename)

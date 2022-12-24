@@ -9,8 +9,8 @@
 
 import unittest
 
-from cli import CliFile, CliLicense
-from cli.license_tools import LicenseTools
+from cli_support import CliFile, CliLicense
+from cli_support.license_tools import LicenseTools
 
 
 class LicenseToolTest(unittest.TestCase):

@@ -9,7 +9,7 @@
 
 import unittest
 
-from cli import CliFile
+from cli_support import CliFile
 
 
 class CliFileTest(unittest.TestCase):

@@ -1,4 +1,4 @@
-# CLI for Python
+# CLI Support for Python
 
 Python library to read Component License Information (CLI) files. They can be
 created by [FOSSology](https://www.fossology.org) and stored in
@@ -11,8 +11,8 @@ For more information about the CLI file format, please have a look at
 
 ### Installation
 
-This project is available as [Python package on PyPi.org](https://pypi.org/project/clipython/).  
-Install cli and required dependencies:
+This project is available as [Python package on PyPi.org](https://pypi.org/project/cli-support/).  
+Install cli_support and required dependencies:
 
   ```shell
   pip install cli
@@ -29,6 +29,7 @@ Install cli and required dependencies:
   ```python
   import cli
   clifile = cli.CLI.CliFile()
+  clifile.read_from_file("cli_filename")
   ```
 
 ## Contribute

@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "cli"
+name = "cli_support"
 version = "1.3"
 description = "Support component license information (CLI) files"
 authors = ["Thomas Graf <thomas.graf@siemens.com>"]
