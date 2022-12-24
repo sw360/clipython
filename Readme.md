@@ -11,7 +11,7 @@ For more information about the CLI file format, please have a look at
 
 ### Installation
 
-This project is available as [Python package on PyPi.org](https://pypi.org/project/cli-python/).  
+This project is available as [Python package on PyPi.org](https://pypi.org/project/clipython/).  
 Install cli and required dependencies:
 
   ```shell
