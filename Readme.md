@@ -3,7 +3,6 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/sw360/clipython/blob/master/License.md)
 [![Python Version](https://img.shields.io/badge/python-3.8%2C3.9-yellow?logo=python)](https://www.python.org/doc/versions/)
 [![PyPI version](https://img.shields.io/badge/pypi%20package-1.2.1-green)](https://pypi.org/project/cli-support)
-
 [![Static checks](https://github.com/sw360/clipython/actions/workflows/python-package.yml/badge.svg)](https://github.com/sw360/clipython/actions/workflows/python-package.yml)
 [![Unit tests](https://github.com/sw360/clipython/actions/workflows/unit-test.yml/badge.svg)](https://github.com/sw360/clipython/actions/workflows/unit-test.yml)
 
@@ -22,7 +21,7 @@ This project is available as [Python package on PyPi.org](https://pypi.org/proje
 Install cli_support and required dependencies:
 
   ```shell
-  pip install cli
+  pip install cli-support
   ```
 
 ### Required Packages
@@ -34,8 +33,8 @@ Install cli_support and required dependencies:
 * Start using the API:
 
   ```python
-  import cli
-  clifile = cli.CLI.CliFile()
+  import cli_support
+  clifile = cli_support.CLI.CliFile()
   clifile.read_from_file("cli_filename")
   ```
 

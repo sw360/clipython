@@ -1,6 +1,6 @@
 # Python library to read Component License Information (CLI) files
 
-## NEXT (V1.3)
+## V1.3 (2023-01-10)
 
 * relicensed to MIT.
 * unit tests added.
