@@ -21,7 +21,7 @@ This project is available as [Python package on PyPi.org](https://pypi.org/proje
 Install cli_support and required dependencies:
 
   ```shell
-  pip install cli-support
+  pip install cli_support
   ```
 
 ### Required Packages
