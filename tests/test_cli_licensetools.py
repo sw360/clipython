@@ -1,5 +1,5 @@
 # -------------------------------------------------------------------------------
-# (c) 2022 Siemens AG
+# (c) 2022-2023 Siemens AG
 # All Rights Reserved.
 # Author: thomas.graf@siemens.com
 #
@@ -14,21 +14,22 @@ from cli_support.license_tools import LicenseTools
 
 
 class LicenseToolTest(unittest.TestCase):
-    TESTFILE1 = "test/testfiles/CLIXML_MIT_simple.xml"
-    TESTFILE2 = "test/testfiles/CLIXML_COMPLETE_simple.xml"
-    TESTFILE3 = "test/testfiles/CLIXML_Licenses_source_shipping.xml"
-    TESTFILE4 = "test/testfiles/CLIXML_Licenses_multi.xml"
+    TESTFILE1 = "tests/fixtures/CLIXML_MIT_simple.xml"
+    TESTFILE2 = "tests/fixtures/CLIXML_COMPLETE_simple.xml"
+    TESTFILE3 = "tests/fixtures/CLIXML_Licenses_source_shipping.xml"
+    TESTFILE4 = "tests/fixtures/CLIXML_Licenses_multi.xml"
 
-    def test_get_global_license(self):
+    def test_get_global_license(self) -> None:
         cli = CliFile()
         cli.read_from_file(self.TESTFILE2)
 
         actual = LicenseTools.get_global_license(cli)
         self.assertIsNotNone(actual)
-        self.assertEqual("MIT", actual.spdx_identifier)
-        self.assertEqual("MIT License", actual.name)
+        if actual:  # for mypy
+            self.assertEqual("MIT", actual.spdx_identifier)
+            self.assertEqual("MIT License", actual.name)
 
-    def test_get_non_global_licenses(self):
+    def test_get_non_global_licenses(self) -> None:
         cli = CliFile()
         cli.read_from_file(self.TESTFILE2)
 
@@ -37,7 +38,7 @@ class LicenseToolTest(unittest.TestCase):
         self.assertEqual(1, len(actual))
         self.assertEqual("Apache-2.0", actual[0].spdx_identifier)
 
-    def test_has_license(self):
+    def test_has_license(self) -> None:
         cli = CliFile()
         cli.read_from_file(self.TESTFILE2)
 
@@ -53,7 +54,7 @@ class LicenseToolTest(unittest.TestCase):
         actual = LicenseTools.has_license(cli, "XYZ")
         self.assertFalse(actual)
 
-    def test_is_source_code_shipping_license(self):
+    def test_is_source_code_shipping_license(self) -> None:
         actual = LicenseTools.is_source_code_shipping_license("MIT")
         self.assertFalse(actual)
 
@@ -87,7 +88,7 @@ class LicenseToolTest(unittest.TestCase):
         actual = LicenseTools.is_source_code_shipping_license("ECOS-1.1")
         self.assertTrue(actual)
 
-    def test_is_multi_license(self):
+    def test_is_multi_license(self) -> None:
         actual = LicenseTools.is_multi_license("MIT")
         self.assertFalse(actual)
 
@@ -103,7 +104,7 @@ class LicenseToolTest(unittest.TestCase):
         actual = LicenseTools.is_multi_license("DUAL: MIT, GPL-2.0")
         self.assertTrue(actual)
 
-    def test_is_do_not_use_license(self):
+    def test_is_do_not_use_license(self) -> None:
         license = CliLicense()
         license.type = "RED"
         actual = LicenseTools.is_do_not_use_license(license)
@@ -121,7 +122,7 @@ class LicenseToolTest(unittest.TestCase):
         actual = LicenseTools.is_do_not_use_license(license)
         self.assertFalse(actual)
 
-    def test_has_multi_license(self):
+    def test_has_multi_license(self) -> None:
         cli = CliFile()
         cli.read_from_file(self.TESTFILE1)
         actual = LicenseTools.has_multi_license(cli)
@@ -132,7 +133,7 @@ class LicenseToolTest(unittest.TestCase):
         actual = LicenseTools.has_multi_license(cli)
         self.assertTrue(actual)
 
-    def test_has_do_not_use_files(self):
+    def test_has_do_not_use_files(self) -> None:
         cli = CliFile()
         cli.read_from_file(self.TESTFILE2)
         actual = LicenseTools.has_do_not_use_files(cli)
@@ -143,7 +144,7 @@ class LicenseToolTest(unittest.TestCase):
         actual = LicenseTools.has_do_not_use_files(cli)
         self.assertTrue(actual)
 
-    def test_has_source_code_shipping_license(self):
+    def test_has_source_code_shipping_license(self) -> None:
         cli = CliFile()
         cli.read_from_file(self.TESTFILE3)
         actual = LicenseTools.has_source_code_shipping_license(cli)
@@ -154,7 +155,7 @@ class LicenseToolTest(unittest.TestCase):
         actual = LicenseTools.has_source_code_shipping_license(cli)
         self.assertFalse(actual)
 
-    def test_license_has_not_readme_tag(self):
+    def test_license_has_not_readme_tag(self) -> None:
         cli = CliFile()
         cli.read_from_file(self.TESTFILE3)
         actual = LicenseTools.license_has_not_readme_tag(cli.licenses[2])
@@ -163,7 +164,7 @@ class LicenseToolTest(unittest.TestCase):
         actual = LicenseTools.license_has_not_readme_tag(cli.licenses[1])
         self.assertFalse(actual)
 
-    def test_component_has_not_readme_tag(self):
+    def test_component_has_not_readme_tag(self) -> None:
         cli = CliFile()
         cli.read_from_file(self.TESTFILE1)
         actual = LicenseTools.component_has_not_readme_tag(cli)

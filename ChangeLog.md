@@ -1,5 +1,10 @@
 # Python library to read Component License Information (CLI) files
 
+## 2.0.0
+
+* add CLI write functionality.
+* add type information
+
 ## V1.3 (2023-01-10)
 
 * relicensed to MIT.
