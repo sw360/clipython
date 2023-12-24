@@ -2,10 +2,12 @@
 # Run quality checks
 # ------------------
 
-# 2022-07-15, T. Graf
+# 2023-12-24, T. Graf
 
 poetry run flake8
 npx -q markdownlint-cli *.md
+isort .
+mypy .
 
 
 # -----------------------------------

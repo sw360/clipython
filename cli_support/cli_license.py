@@ -1,5 +1,5 @@
 # -------------------------------------------------------------------------------
-# (c) 2019-2022 Siemens AG
+# (c) 2019-2023 Siemens AG
 # All Rights Reserved.
 # Author: thomas.graf@siemens.com
 #
@@ -13,31 +13,32 @@ from .cli_file_item_base import CliFileItemBase
 
 
 class CliLicense(CliFileItemBase):
-    """Encapsulates a license"""
+    """Encapsulates a license."""
 
     CONTENT_TAG = "Content"
     ACKNOWLEDGEMENTS_TAG = "Acknowledgements"
     TAGS_TAG = "Tags"
 
-    def __init__(self):
+    def __init__(self) -> None:
         CliFileItemBase.__init__(self)
-        self.license_text = ""
-        self.type = ""
-        self.name = ""
-        self.spdx_identifier = ""
-        self.acknowledgements = []
-        self.tags = []
-        self.files = []
-        self.hashes = []
+        self.license_text: str = ""
+        self.type: str = ""
+        self.name: str = ""
+        self.spdx_identifier: str = ""
+        self.acknowledgements: list[str] = []
+        self.tags: list[str] = []
+        self.files: list[str] = []
+        self.hashes: list[str] = []
 
-    def read_from_element(self, element: ET.Element):
+    def _read_from_element(self, element: ET.Element) -> None:
+        """Read license from XML element."""
         self.type = element.attrib["type"]
         self.name = element.attrib["name"]
 
         if "spdxidentifier" in element.attrib:
             self.spdx_identifier = element.attrib["spdxidentifier"]
 
-        self.read_files_from_element(element)
+        self._read_files_from_element(element)
 
         for elem in element:
             if elem.tag == self.CONTENT_TAG:
@@ -55,6 +56,29 @@ class CliLicense(CliFileItemBase):
                     taglist = elem.text.strip()
                     if "," in taglist:
                         self.tags = taglist.split(",")
-                    else:
+                    elif " " in taglist:
                         self.tags = taglist.split(" ")
+                    else:
+                        self.tags.append(taglist)
                 continue
+
+    def _append_to_xml(self, parent: ET.Element) -> None:
+        """Write license to XML element."""
+        lic = ET.SubElement(
+            parent,
+            "License",
+            type=self.type,
+            name=self.name,
+            spdxidentifier=self.spdx_identifier)
+        node = ET.SubElement(lic, "Content")
+        cdata = self.CDATA(self.license_text)
+        node.append(cdata)
+
+        CliFileItemBase._append_to_xml(self, lic)
+
+        ack = ET.SubElement(lic, "Acknowledgements")
+        cdata = self.CDATA("\n".join(str(x) for x in self.acknowledgements))
+        ack.append(cdata)
+
+        tags = ET.SubElement(lic, "Tags")
+        tags.text = ",".join(str(x) for x in self.tags)

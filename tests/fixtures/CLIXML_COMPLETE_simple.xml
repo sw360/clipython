@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<ComponentLicenseInformation component="TestFile2" creator="john.doe@cli.com" date="2022-03-09" baseDoc="/srv/fotransfer/repository/report" toolUsed="SpdxToCliConverter" componentID="12345" includesAcknowledgements="false" componentSHA1="5243c0eac8c674732802731670657c93855f4071" Version="1.5">
+<ComponentLicenseInformation component="TestFile2" creator="john.doe@cli.com" date="2022-03-09" baseDoc="/srv/fotransfer/repository/report" toolUsed="SpdxToCliConverter" componentID="12345" includesAcknowledgements="true" componentSHA1="5243c0eac8c674732802731670657c93855f4071" Version="1.5">
   <GeneralInformation>
     <ReportId>96819AA1-7466-42BF-9FA0-DCCE10272D09</ReportId>
     <ReviewedBy>mary.jane@cli.com</ReviewedBy>

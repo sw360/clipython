@@ -1,5 +1,5 @@
 # -------------------------------------------------------------------------------
-# (c) 2019-2023 Siemens AG
+# (c) 2023 Siemens AG
 # All Rights Reserved.
 # Author: thomas.graf@siemens.com
 #
@@ -12,31 +12,22 @@ import xml.etree.ElementTree as ET
 from .cli_file_item_base import CliFileItemBase
 
 
-class CliCopyright(CliFileItemBase):
-    """Encapsulates a copyright statement."""
+class CliIrrelevantFiles(CliFileItemBase):
+    """Encapsulates the irrelevant files."""
 
     CONTENT_TAG = "Content"
 
     def __init__(self) -> None:
         CliFileItemBase.__init__(self)
-        self.text: str = ""
         self.files: list[str] = []
         self.hashes: list[str] = []
 
     def _read_from_element(self, element: ET.Element) -> None:
-        """Read copyright from XML element."""
+        """Read irrelevant files from XML element."""
         self._read_files_from_element(element)
-        for elem in element:
-            if elem.tag == self.CONTENT_TAG and elem.text:
-                if elem.text is not None:
-                    self.text = elem.text.strip()
-                continue
 
     def _append_to_xml(self, parent: ET.Element) -> None:
-        """Write copyright to XML element."""
-        cr = ET.SubElement(parent, "Copyright")
-        node = ET.SubElement(cr, "Content")
-        cdata = self.CDATA(self.text)
-        node.append(cdata)
+        """Write irrelevant files to XML element."""
+        cr = ET.SubElement(parent, "IrrelevantFiles")
 
         CliFileItemBase._append_to_xml(self, cr)

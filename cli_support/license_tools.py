@@ -7,6 +7,8 @@
 # SPDX-License-Identifier: MIT
 # -------------------------------------------------------------------------------
 
+from typing import List, Optional
+
 from .CLI import CliFile
 from .cli_license import CliLicense
 
@@ -20,7 +22,7 @@ class LicenseTools:
     MANUAL_CHECK_NEEDED_TAG = "MANUAL_CHECK_NEEDED"
 
     @staticmethod
-    def get_global_license(clifile: CliFile) -> CliLicense:
+    def get_global_license(clifile: CliFile) -> Optional[CliLicense]:
         """Determines the global license."""
         for lic in clifile.licenses:
             if lic.type.upper() == "GLOBAL":
@@ -29,9 +31,9 @@ class LicenseTools:
         return None
 
     @staticmethod
-    def get_non_global_licenses(clifile: CliFile) -> list:
+    def get_non_global_licenses(clifile: CliFile) -> List[CliLicense]:
         """Gets the non global licenses."""
-        result = []
+        result: list[CliLicense] = []
         for lic in clifile.licenses:
             if lic.type.upper() != "GLOBAL":
                 result.append(lic)
@@ -39,7 +41,7 @@ class LicenseTools:
         return result
 
     @staticmethod
-    def has_license(clifile: CliFile, spdx_identifier: str):
+    def has_license(clifile: CliFile, spdx_identifier: str) -> bool:
         """Determines whether the specified component has the
         specified license."""
         for lic in clifile.licenses:
@@ -91,7 +93,7 @@ class LicenseTools:
         return False
 
     @staticmethod
-    def is_do_not_use_license(license: CliLicense):
+    def is_do_not_use_license(license: CliLicense) -> bool:
         """Determines whether this license is a 'do not use' license."""
         typeUpper = license.type.upper()
         if typeUpper == "OTHER_RED":
@@ -104,7 +106,7 @@ class LicenseTools:
         return False
 
     @staticmethod
-    def has_multi_license(clifile: CliFile):
+    def has_multi_license(clifile: CliFile) -> bool:
         """Determines whether this component has at least one multi license."""
         for lic in clifile.licenses:
             if LicenseTools.is_multi_license(lic.spdx_identifier):
@@ -113,7 +115,7 @@ class LicenseTools:
         return False
 
     @staticmethod
-    def has_do_not_use_files(clifile: CliFile):
+    def has_do_not_use_files(clifile: CliFile) -> bool:
         """Determines whether this component has at least one
         'do not use' license/file."""
         for lic in clifile.licenses:
@@ -123,7 +125,7 @@ class LicenseTools:
         return False
 
     @staticmethod
-    def has_source_code_shipping_license(clifile: CliFile):
+    def has_source_code_shipping_license(clifile: CliFile) -> bool:
         """Determines whether this component has at least one license
         where the source code needs to get shipped."""
         for lic in clifile.licenses:
@@ -133,7 +135,7 @@ class LicenseTools:
         return False
 
     @staticmethod
-    def license_has_not_readme_tag(license: CliLicense):
+    def license_has_not_readme_tag(license: CliLicense) -> bool:
         """Determines whether the specified item has a
         'not for Readme_OSS' tag."""
         for tag in license.tags:
@@ -143,7 +145,7 @@ class LicenseTools:
         return False
 
     @staticmethod
-    def component_has_not_readme_tag(clifile: CliFile):
+    def component_has_not_readme_tag(clifile: CliFile) -> bool:
         """Determines whether the specified item has a
         'not for Readme_OSS' tag."""
         for tag in clifile.tags:

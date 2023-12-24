@@ -1,0 +1,85 @@
+<ComponentLicenseInformation component="MyComp, 1.2.3" creator="Me" date="2023-12-23" baseDoc="Some doc" toolUsed="clipython" componentID="007" includesAcknowledgements="false" componentSHA1="dead" Version="1.6">
+  <GeneralInformation>
+    <ReportId>112233</ReportId>
+    <ReviewedBy>TG</ReviewedBy>
+    <ComponentName>MyComp</ComponentName>
+    <Community>Me</Community>
+    <ComponentVersion>1.2.3</ComponentVersion>
+    <ComponentHash>DEADBEEF</ComponentHash>
+    <ComponentReleaseDate>2023-12-23</ComponentReleaseDate>
+    <LinkComponentManagement>
+      <![CDATA[https://anylink.com]]></LinkComponentManagement>
+    <LinkScanTool>
+      <![CDATA[https://anothertools.com]]></LinkScanTool>
+    <ComponentId>
+      <Type>package-url</Type>
+      <Id>pkg:npm/%40angular/animation@12.3.1</Id>
+    </ComponentId>
+  </GeneralInformation>
+  <AssessmentSummary>
+    <GeneralAssessment>
+      <![CDATA[abc]]></GeneralAssessment>
+    <CriticalFilesFound>None</CriticalFilesFound>
+    <DependencyNotes>yes</DependencyNotes>
+    <ExportRestrictionsFound>yes</ExportRestrictionsFound>
+    <UsageRestrictionsFound>yes</UsageRestrictionsFound>
+    <AdditionalNotes>
+      <![CDATA[xyz]]></AdditionalNotes>
+  </AssessmentSummary>
+  <License type="global" name="Apache Software License, Version 2.0" spdxidentifier="Apache-2.0">
+    <Content>
+      <![CDATA[some text]]></Content>
+    <Files>
+      <![CDATA[license1.txt]]></Files>
+    <FileHash>
+      <![CDATA[12AB]]></FileHash>
+    <Acknowledgements>
+      <![CDATA[Apache NOTICE file...]]></Acknowledgements>
+    <Tags>OSS</Tags>
+  </License>
+  <Copyright>
+    <Content>
+      <![CDATA[Copyright (c) by me]]></Content>
+    <Files>
+      <![CDATA[copyright1.txt]]></Files>
+    <FileHash>
+      <![CDATA[12CD]]></FileHash>
+  </Copyright>
+  <Obligation>
+    <Topic>
+      <![CDATA[obligation]]></Topic>
+    <Text>
+      <![CDATA[you have to]]></Text>
+      <Licenses>
+        <License>
+          <![CDATA[AGPL-9.0]]></License>
+      </Licenses>
+  </Obligation>
+  <ExportRestrictions>
+    <Content>
+      <![CDATA[ECCN=N]]></Content>
+    <Files>
+      <![CDATA[export_restriction1.txt]]></Files>
+    <FileHash>
+      <![CDATA[12EF]]></FileHash>
+    <Comment>
+      <![CDATA[This is no fake!]]></Comment>
+  </ExportRestrictions>
+  <IrrelevantFiles>
+    <Files>
+      <![CDATA[ir1.txt]]></Files>
+    <FileHash>
+      <![CDATA[12AB]]></FileHash>
+  </IrrelevantFiles>
+  <ExternalIds>
+    <ExternalId>
+      <Key>
+        <![CDATA[category]]></Key>
+      <Value>
+        <![CDATA[fun]]></Value>
+    </ExternalId>
+  </ExternalIds>
+  <Tags>t1,OSS</Tags>
+  <Comment>
+    <![CDATA[some comment]]></Comment>
+</ComponentLicenseInformation>

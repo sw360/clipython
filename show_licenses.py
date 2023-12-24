@@ -16,7 +16,10 @@ show_licenses filename
 """
 
 import sys
-from colorama import init, Fore
+from typing import Any, List
+
+from colorama import Fore, init
+
 import cli_support
 
 # initialize colorama
@@ -25,12 +28,12 @@ init()
 
 class ShowLicenses():
     """Application class"""
-    def __init__(self):
-        self.cli_filename = ""
-        self.global_license_list = []
+    def __init__(self) -> None:
+        self.cli_filename: str = ""
+        self.global_license_list: List[str] = []
 
     @classmethod
-    def print_license_list(cls, license_list):
+    def print_license_list(cls, license_list: List[str]) -> None:
         """Displays the licenses color-coded"""
         for lic in license_list:
             color = Fore.RESET
@@ -54,7 +57,7 @@ class ShowLicenses():
 
         print(Fore.RESET)
 
-    def process_cli_file(self, cli_filename):
+    def process_cli_file(self, cli_filename: str) -> None:
         """Processes a single CLI file"""
         clifile = cli_support.CLI.CliFile()
 
@@ -67,13 +70,13 @@ class ShowLicenses():
             print(Fore.RESET)
             return
 
-        license_list = []
+        license_list: List[str] = []
         for lic in clifile.licenses:
             license_list.append(lic.name)
             if lic.name not in self.global_license_list:
                 self.global_license_list.append(lic.name)
 
-    def process_commandline(self, argv):
+    def process_commandline(self, argv: Any) -> Any:
         """Reads the command line arguments"""
         if len(argv) < 2:
             sys.exit(
@@ -83,7 +86,7 @@ class ShowLicenses():
 
         self.cli_filename = argv[1]
 
-    def main(self):
+    def main(self) -> None:
         """Main method()"""
         print("\nShow all licenses and copyrights of a component:\n")
         self.process_commandline(sys.argv)
