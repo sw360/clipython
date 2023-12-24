@@ -22,7 +22,7 @@ jobs:
     container: ${{ matrix.container }}
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     - name: Install host dependencies
       run: |
@@ -35,6 +35,10 @@ jobs:
         pip install poetry
         poetry install
         pip install mypy
+        # install type packages
+        pip install types-colorama
+        pip install types-requests
+        pip install types-urllib3
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
