@@ -201,6 +201,6 @@ class CliFile(XmlBase):
         comment.append(cdata)
 
         tree = ET.ElementTree(root)
-        if sys.version_info[:3] > (3, 8):
+        if not sys.version_info < (3, 9):
             ET.indent(tree)
         tree.write(filename, encoding="UTF-8")
