@@ -41,6 +41,10 @@ jobs:
         
         # exit-zero treats all errors as warnings
         poetry run flake8 . --count --exit-zero --statistics
+    - name: Check with mypy
+      run: |
+        mypy .
+
 #    - name: Check format with black
 #      run: |
  #       poetry run black . --check --diff
