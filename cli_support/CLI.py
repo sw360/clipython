@@ -7,8 +7,8 @@
 # SPDX-License-Identifier: MIT
 # -------------------------------------------------------------------------------
 
+import sys
 import xml.etree.ElementTree as ET
-# from typing import List
 from typing import Any
 
 from .cli_assessment_summary import CliAssessmentSummary
@@ -201,5 +201,6 @@ class CliFile(XmlBase):
         comment.append(cdata)
 
         tree = ET.ElementTree(root)
-        ET.indent(tree)
+        if sys.version_info[:3] > (3, 8):
+            ET.indent(tree)
         tree.write(filename, encoding="UTF-8")

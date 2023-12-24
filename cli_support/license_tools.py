@@ -7,7 +7,7 @@
 # SPDX-License-Identifier: MIT
 # -------------------------------------------------------------------------------
 
-from typing import Optional, List
+from typing import List, Optional
 
 from .CLI import CliFile
 from .cli_license import CliLicense
