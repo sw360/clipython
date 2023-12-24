@@ -9,7 +9,7 @@
 
 import sys
 import xml.etree.ElementTree as ET
-from typing import Any
+from typing import Any, Optional
 
 from .cli_assessment_summary import CliAssessmentSummary
 from .cli_copyright import CliCopyright
@@ -203,4 +203,19 @@ class CliFile(XmlBase):
         tree = ET.ElementTree(root)
         if not sys.version_info < (3, 9):
             ET.indent(tree)
+        else:
+            self._pretty_print(root)
         tree.write(filename, encoding="UTF-8")
+
+    def _pretty_print(self, current: ET.Element, parent: Optional[ET.Element] = None,
+                      index: int = -1, depth: int = 0) -> None:
+        """Helper function that mimics indent() of Python 3.9."""
+        for i, node in enumerate(current):
+            self._pretty_print(node, current, i, depth + 1)
+        if parent is not None:
+            if index == 0:
+                parent.text = '\n' + ('\t' * depth)
+            else:
+                parent[index - 1].tail = '\n' + ('\t' * depth)
+            if index == len(parent) - 1:
+                current.tail = '\n' + ('\t' * (depth - 1))
