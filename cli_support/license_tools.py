@@ -7,7 +7,7 @@
 # SPDX-License-Identifier: MIT
 # -------------------------------------------------------------------------------
 
-from typing import Optional
+from typing import Optional, List
 
 from .CLI import CliFile
 from .cli_license import CliLicense
@@ -31,7 +31,7 @@ class LicenseTools:
         return None
 
     @staticmethod
-    def get_non_global_licenses(clifile: CliFile) -> list[CliLicense]:
+    def get_non_global_licenses(clifile: CliFile) -> List[CliLicense]:
         """Gets the non global licenses."""
         result: list[CliLicense] = []
         for lic in clifile.licenses:
