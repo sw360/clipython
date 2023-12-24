@@ -33,7 +33,7 @@ class LicenseTools:
     @staticmethod
     def get_non_global_licenses(clifile: CliFile) -> List[CliLicense]:
         """Gets the non global licenses."""
-        result: list[CliLicense] = []
+        result: List[CliLicense] = []
         for lic in clifile.licenses:
             if lic.type.upper() != "GLOBAL":
                 result.append(lic)

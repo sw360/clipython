@@ -8,6 +8,7 @@
 # -------------------------------------------------------------------------------
 
 import xml.etree.ElementTree as ET
+from typing import List
 
 from .cli_file_item_base import CliFileItemBase
 
@@ -20,8 +21,8 @@ class CliCopyright(CliFileItemBase):
     def __init__(self) -> None:
         CliFileItemBase.__init__(self)
         self.text: str = ""
-        self.files: list[str] = []
-        self.hashes: list[str] = []
+        self.files: List[str] = []
+        self.hashes: List[str] = []
 
     def _read_from_element(self, element: ET.Element) -> None:
         """Read copyright from XML element."""

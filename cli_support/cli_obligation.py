@@ -8,6 +8,7 @@
 # -------------------------------------------------------------------------------
 
 import xml.etree.ElementTree as ET
+from typing import List
 
 from .xml_base import XmlBase
 
@@ -23,7 +24,7 @@ class CliObligation(XmlBase):
     def __init__(self) -> None:
         self.text: str = ""
         self.topic: str = ""
-        self.licenses: list[str] = []
+        self.licenses: List[str] = []
 
     def _read_from_element(self, element: ET.Element) -> None:
         """Read license from XML element."""

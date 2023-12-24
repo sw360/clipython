@@ -9,7 +9,7 @@
 
 import sys
 import xml.etree.ElementTree as ET
-from typing import Any, Optional
+from typing import Any, List, Optional
 
 from .cli_assessment_summary import CliAssessmentSummary
 from .cli_copyright import CliCopyright
@@ -65,12 +65,12 @@ class CliFile(XmlBase):
         self.general_information = CliGeneralInformation()
         self.assessment_summary = CliAssessmentSummary()
 
-        self.licenses: list[CliLicense] = []
-        self.copyrights: list[CliCopyright] = []
-        self.obligations: list[CliObligation] = []
-        self.tags: list[str] = []
-        self.export_restrictions: list[CliExportRestriction] = []
-        self.external_ids: list[CliExternalId] = []
+        self.licenses: List[CliLicense] = []
+        self.copyrights: List[CliCopyright] = []
+        self.obligations: List[CliObligation] = []
+        self.tags: List[str] = []
+        self.export_restrictions: List[CliExportRestriction] = []
+        self.external_ids: List[CliExternalId] = []
         self.irrelevant_files = CliIrrelevantFiles()
         self.comment: str = ""
 

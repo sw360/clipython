@@ -8,6 +8,7 @@
 # -------------------------------------------------------------------------------
 
 import xml.etree.ElementTree as ET
+from typing import List
 
 from .cli_file_item_base import CliFileItemBase
 
@@ -25,10 +26,10 @@ class CliLicense(CliFileItemBase):
         self.type: str = ""
         self.name: str = ""
         self.spdx_identifier: str = ""
-        self.acknowledgements: list[str] = []
-        self.tags: list[str] = []
-        self.files: list[str] = []
-        self.hashes: list[str] = []
+        self.acknowledgements: List[str] = []
+        self.tags: List[str] = []
+        self.files: List[str] = []
+        self.hashes: List[str] = []
 
     def _read_from_element(self, element: ET.Element) -> None:
         """Read license from XML element."""

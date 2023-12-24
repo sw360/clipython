@@ -8,6 +8,7 @@
 # -------------------------------------------------------------------------------
 
 import xml.etree.ElementTree as ET
+from typing import List
 
 from .xml_base import XmlBase
 
@@ -19,8 +20,8 @@ class CliFileItemBase(XmlBase):
     FILEHASH_TAG = "FileHash"
 
     def __init__(self) -> None:
-        self.files: list[str] = []
-        self.hashes: list[str] = []
+        self.files: List[str] = []
+        self.hashes: List[str] = []
 
     def _read_files_from_element(self, element: ET.Element) -> None:
         """Read files and hashes from XML element."""
