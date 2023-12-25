@@ -1,8 +1,8 @@
 # CLI Support for Python
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/sw360/clipython/blob/master/License.md)
-[![Python Version](https://img.shields.io/badge/python-3.8%2C3.9-yellow?logo=python)](https://www.python.org/doc/versions/)
-[![PyPI version](https://img.shields.io/badge/pypi%20package-1.2.1-green)](https://pypi.org/project/cli-support)
+[![Python Version](https://img.shields.io/badge/python-3.8%2C3.9%2C3.10%2C3.11-yellow?logo=python)](https://www.python.org/doc/versions/)
+[![PyPI version](https://img.shields.io/badge/pypi%20package-2.0.0-green)](https://pypi.org/project/cli-support)
 [![Static checks](https://github.com/sw360/clipython/actions/workflows/python-package.yml/badge.svg)](https://github.com/sw360/clipython/actions/workflows/python-package.yml)
 [![Unit tests](https://github.com/sw360/clipython/actions/workflows/unit-test.yml/badge.svg)](https://github.com/sw360/clipython/actions/workflows/unit-test.yml)
 
