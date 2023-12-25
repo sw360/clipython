@@ -6,6 +6,8 @@ authors = ["Thomas Graf <thomas.graf@siemens.com>"]
 license = "MIT"
 readme="Readme.md"
 include = ["LICENSE.md"]
+repository = "https://github.com/sw360/clipython"
+homepage = "https://github.com/sw360/clipython"
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
