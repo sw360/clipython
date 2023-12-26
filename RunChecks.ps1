@@ -6,8 +6,8 @@
 
 poetry run flake8
 npx -q markdownlint-cli *.md
-isort .
-mypy .
+poetry run isort .
+poetry run mypy .
 
 
 # -----------------------------------
