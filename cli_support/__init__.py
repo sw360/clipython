@@ -1,5 +1,5 @@
 # -------------------------------------------------------------------------------
-# (c) 2019-2023 Siemens AG
+# (c) 2019-2024 Siemens AG
 # All Rights Reserved.
 # Author: thomas.graf@siemens.com
 #
@@ -7,7 +7,7 @@
 # SPDX-License-Identifier: MIT
 # -------------------------------------------------------------------------------
 
-__version__ = (2, 0, 0)
+__version__ = (2, 0, 1)
 
 # isort: skip_file
 from .cli_copyright import CliCopyright

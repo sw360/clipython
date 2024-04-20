@@ -2,11 +2,11 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/sw360/clipython/blob/master/License.md)
 [![Python Version](https://img.shields.io/badge/python-3.8%2C3.9%2C3.10%2C3.11-yellow?logo=python)](https://www.python.org/doc/versions/)
-[![PyPI version](https://img.shields.io/badge/pypi%20package-2.0.0-green)](https://pypi.org/project/cli-support)
+[![PyPI](https://shields.io/pypi/v/cli-support)](https://pypi.org/project/cli-support)
 [![Static checks](https://github.com/sw360/clipython/actions/workflows/python-package.yml/badge.svg)](https://github.com/sw360/clipython/actions/workflows/python-package.yml)
 [![Unit tests](https://github.com/sw360/clipython/actions/workflows/unit-test.yml/badge.svg)](https://github.com/sw360/clipython/actions/workflows/unit-test.yml)
 
-Python library to read Component License Information (CLI) files. They can be
+Python library to read and write Component License Information (CLI) files. They can be
 created by [FOSSology](https://www.fossology.org) and stored in
 [SW360](https://www.eclipse.org/sw360/).
 
@@ -85,6 +85,8 @@ python ./show_licenses.py ./test/testfiles/CLIXML_MIT_simple.xml
 ```
 
 ## License
+
+Copyright 2019-2024 Siemens
 
 The project is licensed under the MIT license.  
 SPDX-License-Identifier: MIT
