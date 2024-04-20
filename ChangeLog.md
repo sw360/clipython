@@ -1,6 +1,10 @@
 # Python library to read Component License Information (CLI) files
 
-## 2.0.0
+## V2.0.1
+
+* remove requests dependency (has never been used...)
+
+## V2.0.0
 
 * add CLI write functionality.
 * add type information
