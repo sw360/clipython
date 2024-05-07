@@ -1,5 +1,5 @@
 # -------------------------------------------------------------------------------
-# (c) 2019-2023 Siemens AG
+# (c) 2019-2024 Siemens AG
 # All Rights Reserved.
 # Author: thomas.graf@siemens.com
 #
@@ -40,10 +40,12 @@ class CliFileItemBase(XmlBase):
 
     def _append_to_xml(self, parent: ET.Element) -> None:
         """Write files and hashes to XML element."""
-        file_data = ET.SubElement(parent, "Files")
-        cdata = self.CDATA("\n".join(str(x) for x in self.files))
-        file_data.append(cdata)
+        if len(self.files) > 0:
+            file_data = ET.SubElement(parent, "Files")
+            cdata = self.CDATA("\n".join(str(x) for x in self.files))
+            file_data.append(cdata)
 
-        hash_data = ET.SubElement(parent, "FileHash")
-        cdata = self.CDATA("\n".join(str(x) for x in self.hashes))
-        hash_data.append(cdata)
+        if len(self.hashes) > 0:
+            hash_data = ET.SubElement(parent, "FileHash")
+            cdata = self.CDATA("\n".join(str(x) for x in self.hashes))
+            hash_data.append(cdata)

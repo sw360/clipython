@@ -1,5 +1,5 @@
 # -------------------------------------------------------------------------------
-# (c) 2019-2023 Siemens AG
+# (c) 2019-2024 Siemens AG
 # All Rights Reserved.
 # Author: thomas.graf@siemens.com
 #
@@ -77,9 +77,10 @@ class CliLicense(CliFileItemBase):
 
         CliFileItemBase._append_to_xml(self, lic)
 
-        ack = ET.SubElement(lic, "Acknowledgements")
-        cdata = self.CDATA("\n".join(str(x) for x in self.acknowledgements))
-        ack.append(cdata)
+        if len(self.acknowledgements) > 0:
+            ack = ET.SubElement(lic, "Acknowledgements")
+            cdata = self.CDATA("\n".join(str(x) for x in self.acknowledgements))
+            ack.append(cdata)
 
         tags = ET.SubElement(lic, "Tags")
         tags.text = ",".join(str(x) for x in self.tags)
