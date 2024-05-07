@@ -7,7 +7,7 @@
 # SPDX-License-Identifier: MIT
 # -------------------------------------------------------------------------------
 
-__version__ = (2, 0, 1)
+__version__ = (2, 0, 2)
 
 # isort: skip_file
 from .cli_copyright import CliCopyright
