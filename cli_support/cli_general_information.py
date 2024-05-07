@@ -1,5 +1,5 @@
 # -------------------------------------------------------------------------------
-# (c) 2023 Siemens AG
+# (c) 2023-2024 Siemens AG
 # All Rights Reserved.
 # Author: thomas.graf@siemens.com
 #
@@ -115,12 +115,14 @@ class CliGeneralInformation(XmlBase):
         node.text = self.component_release_date
 
         hash_data = ET.SubElement(gi, "LinkComponentManagement")
-        cdata = self.CDATA(self.link_component_management)
-        hash_data.append(cdata)
+        if self.link_component_management:
+            cdata = self.CDATA(self.link_component_management)
+            hash_data.append(cdata)
 
         hash_data = ET.SubElement(gi, "LinkScanTool")
-        cdata = self.CDATA(self.link_scan_tool)
-        hash_data.append(cdata)
+        if self.link_scan_tool:
+            cdata = self.CDATA(self.link_scan_tool)
+            hash_data.append(cdata)
 
         ci = ET.SubElement(gi, "ComponentId")
 

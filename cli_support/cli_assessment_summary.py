@@ -1,5 +1,5 @@
 # -------------------------------------------------------------------------------
-# (c) 2023 Siemens AG
+# (c) 2023-2024 Siemens AG
 # All Rights Reserved.
 # Author: thomas.graf@siemens.com
 #
@@ -59,9 +59,11 @@ class CliAssessmentSummary(XmlBase):
     def _append_to_xml(self, parent: ET.Element) -> None:
         """Write assessment summary to XML element."""
         gi = ET.SubElement(parent, "AssessmentSummary")
+
         node = ET.SubElement(gi, "GeneralAssessment")
-        cdata = self.CDATA(self.general_assessment)
-        node.append(cdata)
+        if self.general_assessment:
+            cdata = self.CDATA(self.general_assessment)
+            node.append(cdata)
 
         node = ET.SubElement(gi, "CriticalFilesFound")
         node.text = self.critical_files_found
@@ -76,5 +78,6 @@ class CliAssessmentSummary(XmlBase):
         node.text = self.usage_restrictions_found
 
         node = ET.SubElement(gi, "AdditionalNotes")
-        cdata = self.CDATA(self.additional_notes)
-        node.append(cdata)
+        if self.additional_notes:
+            cdata = self.CDATA(self.additional_notes)
+            node.append(cdata)

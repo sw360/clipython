@@ -1,8 +1,12 @@
 # Python library to read Component License Information (CLI) files
 
+## NEXT
+
+* do not add empty acknowledgments, files and filehashes.
+
 ## V2.0.1
 
-* remove requests dependency (has never been used...)
+* remove requests dependency (has never been used...).
 
 ## V2.0.0
 

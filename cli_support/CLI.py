@@ -1,5 +1,5 @@
 # -------------------------------------------------------------------------------
-# (c) 2019-2023 Siemens AG
+# (c) 2019-2024 Siemens AG
 # All Rights Reserved.
 # Author: thomas.graf@siemens.com
 #
@@ -197,8 +197,9 @@ class CliFile(XmlBase):
         tags.text = ",".join(str(x) for x in self.tags)
 
         comment = ET.SubElement(root, "Comment")
-        cdata = self.CDATA(self.comment)
-        comment.append(cdata)
+        if self.comment:
+            cdata = self.CDATA(self.comment)
+            comment.append(cdata)
 
         tree = ET.ElementTree(root)
         if not sys.version_info < (3, 9):

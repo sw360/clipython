@@ -1,5 +1,5 @@
 # -------------------------------------------------------------------------------
-# (c) 2022-2023 Siemens AG
+# (c) 2022-2024 Siemens AG
 # All Rights Reserved.
 # Author: thomas.graf@siemens.com
 #
@@ -179,35 +179,25 @@ class CliFileTest(unittest.TestCase):
     <ComponentVersion />
     <ComponentHash />
     <ComponentReleaseDate />
-    <LinkComponentManagement>
-      <![CDATA[]]></LinkComponentManagement>
-    <LinkScanTool>
-      <![CDATA[]]></LinkScanTool>
+    <LinkComponentManagement />
+    <LinkScanTool />
     <ComponentId>
       <Type />
       <Id />
     </ComponentId>
   </GeneralInformation>
   <AssessmentSummary>
-    <GeneralAssessment>
-      <![CDATA[]]></GeneralAssessment>
+    <GeneralAssessment />
     <CriticalFilesFound>None</CriticalFilesFound>
     <DependencyNotes>None</DependencyNotes>
     <ExportRestrictionsFound>None</ExportRestrictionsFound>
     <UsageRestrictionsFound>None</UsageRestrictionsFound>
-    <AdditionalNotes>
-      <![CDATA[]]></AdditionalNotes>
+    <AdditionalNotes />
   </AssessmentSummary>
-  <IrrelevantFiles>
-    <Files>
-      <![CDATA[]]></Files>
-    <FileHash>
-      <![CDATA[]]></FileHash>
-  </IrrelevantFiles>
+  <IrrelevantFiles />
   <ExternalIds />
   <Tags />
-  <Comment>
-    <![CDATA[]]></Comment>
+  <Comment />
 </ComponentLicenseInformation>'''
 
         self.delete_file(self.TESTFILE4)
