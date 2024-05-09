@@ -66,7 +66,7 @@ class ShowLicenses():
         except OSError as ex:
             print(Fore.LIGHTRED_EX)
             print("    Error reading CLI file: " + cli_filename)
-            print("    Error '{0}' occured. Arguments {1}.".format(ex.errno, ex.args))
+            print("    Error '{0}' occurred. Arguments {1}.".format(ex.errno, ex.args))
             print(Fore.RESET)
             return
 
