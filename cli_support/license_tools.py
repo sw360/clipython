@@ -56,7 +56,7 @@ class LicenseTools:
         be ready to be shipped to customers.
         Please note that this is a very simplified approach."""
         licenseUpper = spdx_identifier.upper()
-        if "GPL" in licenseUpper:  # incudes LGPL
+        if "GPL" in licenseUpper:  # includes LGPL
             return True
         if "CDDL" in licenseUpper:
             return True
