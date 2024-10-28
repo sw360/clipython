@@ -19,7 +19,6 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.8"
-ruff = "^0.5.0"
 
 [tool.poetry.group.dev.dependencies]
 colorama = "^0.4.3"
@@ -29,6 +28,7 @@ coverage = ">=6.5.0"
 mypy = "^1.8.0"
 isort = "^5.13.2"
 types-colorama = "^0.4.15.12"
+ruff = "^0.5.0"
 
 [build-system]
 requires = ["poetry>=0.12"]
