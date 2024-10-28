@@ -1,3 +1,8 @@
+<!-- 
+SPDX-FileCopyrightText: (c) 2019-2024 T. Graf
+SPDX-License-Identifier: MIT
+-->
+
 # CLI Support for Python
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/sw360/clipython/blob/master/License.md)
@@ -90,3 +95,8 @@ Copyright 2019-2024 Siemens
 
 The project is licensed under the MIT license.  
 SPDX-License-Identifier: MIT
+
+## SBOM
+
+For an up-to-date CycloneDX SBOM, please have a look at the
+[SBOM](https://github.com/sw360/clipython/tree/master/SBOM) folder.
