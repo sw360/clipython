@@ -1,5 +1,5 @@
 # -------------------------------------------------------------------------------
-# (c) 2019-2022 Siemens AG
+# (c) 2019-2026 Siemens AG
 # All Rights Reserved.
 # Author: thomas.graf@siemens.com
 #
@@ -26,7 +26,7 @@ import cli_support
 init()
 
 
-class ShowLicenses():
+class ShowLicenses:
     """Application class"""
     def __init__(self) -> None:
         self.cli_filename: str = ""
@@ -66,7 +66,7 @@ class ShowLicenses():
         except OSError as ex:
             print(Fore.LIGHTRED_EX)
             print("    Error reading CLI file: " + cli_filename)
-            print("    Error '{0}' occurred. Arguments {1}.".format(ex.errno, ex.args))
+            print(f"    Error '{ex.errno}' occurred. Arguments {ex.args}.")
             print(Fore.RESET)
             return
 

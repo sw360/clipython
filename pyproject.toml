@@ -73,9 +73,9 @@ select = [
     "UP",
     # flake8-bugbear
     "B",
-    # flake8-simplify
-    "SIM",
     # isort
     "I",
 ]
-
+ignore = [
+    "I001",  # I001: isort found an import in the wrong position
+]

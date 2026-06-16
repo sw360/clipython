@@ -27,7 +27,7 @@ ET._original_serialize_xml = ET._serialize_xml  # type: ignore
 
 def _serialize_xml(write, elem, qnames, namespaces, short_empty_elements, **kwargs) -> Any:  # type: ignore
     if elem.tag == XmlBase.CDATA_ID:
-        write("<%s%s]]>" % (elem.tag, elem.text))
+        write(f"<{elem.tag}{elem.text}]]>")
         return
     return ET._original_serialize_xml(write, elem, qnames, namespaces, short_empty_elements, **kwargs)  # type: ignore
 
